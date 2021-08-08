@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.address.add.AddAddressActivity"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:contentInsetStartWithNavigation="0dp"
+            android:paddingEnd="5dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            tools:ignore="RtlSymmetry" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Linear progress indicator -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="Nama Lengkap *"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:padding="2dp"
+                    tools:ignore="HardcodedText"
+                    android:importantForAutofill="no" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:hint="Nomor Telepon *"
+                    android:maxLength="14"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:padding="2dp"
+                    tools:ignore="HardcodedText"
+                    android:importantForAutofill="no" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="Jalan, No. RT/RW *"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:padding="2dp"
+                    tools:ignore="HardcodedText"
+                    android:importantForAutofill="no" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="Rumah/Kost/Kantor *"
+                    android:maxLength="14"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:padding="2dp"
+                    tools:ignore="HardcodedText"
+                    android:importantForAutofill="no" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_province"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="5dp"
+                android:visibility="gone"
+                >
+
+                <Spinner
+                    android:id="@+id/spin_province"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="5dp"
+                android:visibility="gone"
+                >
+
+                <Spinner
+                    android:id="@+id/spin_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="5dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_pos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="Kode POS *"
+                    android:maxLength="14"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:padding="2dp"
+                    tools:ignore="HardcodedText"
+                    android:importantForAutofill="no" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="30dp"
+                android:text="Simpan"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_btn_beli"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
